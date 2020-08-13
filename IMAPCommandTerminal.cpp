@@ -234,7 +234,7 @@ static void walkFn(std::unique_ptr<CIMAPBodyStruct::BodyNode>& bodyNode, CIMAPBo
 // Display parsed IMAP command response
 //
 
-static void processIMAPResponse(CIMAP& imap, CIMAPParse::COMMANDRESPONSE& parsedResponse) {
+static void processIMAPResponse([[maybe_unused]] CIMAP& imap, CIMAPParse::COMMANDRESPONSE& parsedResponse) {
 
     std::cout << std::string(120, '*') << std::endl;
 

@@ -234,7 +234,7 @@ static CIMAPParse::COMMANDRESPONSE parseCommandResponse(const std::string& comma
 // Send command to IMAP server. At present it checks for any errors and just exits.
 //
 
-static std::string sendCommand(CIMAP& imap, const std::string& mailBoxName, 
+static std::string sendCommand(CIMAP& imap, [[maybe_unused]] const std::string& mailBoxName, 
                            const std::string& command) {
 
     std::string commandResponse;

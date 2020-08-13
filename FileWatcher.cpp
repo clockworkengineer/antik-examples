@@ -1,15 +1,3 @@
-#include "HOST.hpp"
-/*
- * File:   FileFolderWatcher.cpp
- * 
- * Author: Robert Tizzard
- * 
- * Created on June 17, 2018
- *
- * Copyright 2018.
- *
- */
-
 //
 // Program: FileFolderWatcher
 //

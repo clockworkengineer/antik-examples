@@ -1,15 +1,3 @@
-#include "HOST.hpp"
-/*
- * File:   ArchiveFolder.cpp
- * 
- * Author: Robert Tizzard
- * 
- * Created on March 4, 2017, 2:33 PM
- *
- * Copyright 2016.
- *
- */
-
 //
 // Program: ArchiveFolder
 //

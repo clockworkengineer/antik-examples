@@ -1,15 +1,3 @@
-#include "HOST.hpp"
-/*
- * File:   SMTPSendMail.cpp
- * 
- * Author: Robert Tizzard
- * 
- * Created on March 9th, 2017, 2:33 PM
- *
- * Copyright 2017.
- *
- */
-
 //
 // Program: SMTPSendMail
 //

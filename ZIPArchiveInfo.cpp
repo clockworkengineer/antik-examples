@@ -1,15 +1,3 @@
-#include "HOST.hpp"
-/*
- * File:   ZIPArchiveInfo.cpp
- * 
- * Author: Robert Tizzard
- * 
- * Created on April 4, 2017, 2:33 PM
- *
- * Copyright 2016.
- *
- */
-
 //
 // Program: ZIPArchiveInfo
 //

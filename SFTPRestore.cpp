@@ -1,15 +1,3 @@
-#include "HOST.hpp"
-/*
- * File:   SFTPRestore.cpp
- * 
- * Author: Robert Tizzard
- * 
- * Created on October 24, 2017, 2:33 PM
- *
- * Copyright 2017.
- *
- */
-
 //
 // Program: SFTPRestore
 //

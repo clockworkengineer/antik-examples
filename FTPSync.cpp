@@ -29,6 +29,9 @@
 
 #include <iostream>
 #include <unordered_map>
+#include <chrono>
+
+using namespace std::chrono;
 
 //
 // Antik Classes
@@ -291,22 +294,20 @@ int main(int argc, char** argv) {
             }
         }
 
-        // Copy updated files to server
-        // Commented out til in can get fix. 
-        // for (auto file : localFiles) {
-        //     if (CFile::isFile(file)) {
-        //         auto localModifiedTime = CFile::lastWriteTime(file);
-        //         if (remoteFileModifiedTimes[localFileToRemote(argData, file)] < 
-        //                 static_cast<CFTP::DateTime>(std::localtime(&localModifiedTime))) {
-        //             std::cout << "Server file " << localFileToRemote(argData, file) << " out of date." << std::endl;
-        //             if (ftpServer.putFile(localFileToRemote(argData, file), file) == 226) {
-        //                 std::cout << "File [" << file << " ] copied to server." << std::endl;
-        //             } else {
-        //                 std::cerr << "File [" << file << " ] not copied to server." << std::endl;
-        //             }
-        //         }
-        //     }
-        // }
+        for (auto file : localFiles) {
+            if (CFile::isFile(file)) {
+                auto localModifiedTime = system_clock::to_time_t(file_clock::to_sys(CFile::lastWriteTime(file)));
+                if (remoteFileModifiedTimes[localFileToRemote(argData, file)] < 
+                        static_cast<CFTP::DateTime>(std::localtime(&localModifiedTime))) {
+                    std::cout << "Server file " << localFileToRemote(argData, file) << " out of date." << std::endl;
+                    if (ftpServer.putFile(localFileToRemote(argData, file), file) == 226) {
+                        std::cout << "File [" << file << " ] copied to server." << std::endl;
+                    } else {
+                        std::cerr << "File [" << file << " ] not copied to server." << std::endl;
+                    }
+                }
+            }
+        }
         
         // Disconnect 
 
